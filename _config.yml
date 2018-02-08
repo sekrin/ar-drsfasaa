@@ -9,7 +9,7 @@ url: "https://arabic-droid.github.io" # the base hostname & protocol for your si
 paginate:	5 # The number of posts to show per page on your homepage
 
 
-
+disqus_name:
 facebook_admin:
 facebook_id:
 twitter_username:
