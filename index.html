@@ -3,12 +3,21 @@ layout: default
 sd: site
 ---
 
-<main class="content" role="main">
 
-  <header class="blog-header">
-      <h1 class="blog-title">{{ site.title }}</h1>
-      <h2 class="blog-description">{{ site.description }}</h2>
-  </header>
+
+    <div class="container main">
+
+  <div class="doc-sidebar">
+
+   
+
+</div>
+  
+  
+  
+      <div class="content">
+
+  
 
   <div class="cf frame">
     {% for post in paginator.posts %}
@@ -45,7 +54,13 @@ sd: site
       <a class="older-posts disabled">Newer posts &rarr;</a>
     {% endif %}
   </nav>
+</div>
+  </div>
 
-</main>
+  <header class="blog-header">
+      <h1 class="blog-title">{{ site.title }}</h1>
+      <h2 class="blog-description">{{ site.description }}</h2>
+  </header>
+
 
 {% include footer.html %}
