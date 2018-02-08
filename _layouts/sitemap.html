@@ -19,8 +19,9 @@
     </url>
   {% endfor %}
   {% for page in site.pages %}
+        {% if page.index %}
+
   <url>
-      {% if page.index %}
     <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.sitemap.lastmod %}
       <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
@@ -41,11 +42,11 @@
     {% else %}
       <priority>0.3</priority>
     {% endif %}
-    
+      </url>
+
         {% else %}
 
         {% endif %}
 
-  </url>
   {% endfor %}
 </urlset>
