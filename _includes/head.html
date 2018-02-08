@@ -39,6 +39,55 @@
   
 
   
+  {% if page.sd %}
+  
+  <script type="application/ld+json">
+{ "@context": "http://schema.org", 
+ "@type": "Blog",
+ "keywords": "software engineering agile refactoring c# ruby javascript", 
+ "url": "https://arabic-droid.github.io",
+ "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://arabic-droid.github.io"
+  },
+ "author": {
+    "@type": "Person",
+    "name": "مطور اندرويد",
+    "sameAs": [
+        "https://twitter.com/pauldambra",
+        "https://github.com/pauldambra",
+        "https://plus.google.com/u/0/+PaulDAmbraPlus"
+    ]
+    
+  }
+ }
+</script>
+  
+  
+  {% else %}
+{% 
+	include structuredData.html 
+	headline=page.title
+	genre=page.category
+	keywords=page.keywords
+	content=page.content
+	link=page.permalink
+	date=page.date
+%}
+  {% endif %}
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   <style amp-custom>
 
