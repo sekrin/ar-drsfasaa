@@ -3,7 +3,7 @@ User-agent: Mediapartners-Google
 Disallow: 
 
 User-agent: *
-Disallow: /search
+Disallow: /safety
 Allow: /
 
 Sitemap: https://arabic-droid.github.io/sitemap.xml
