@@ -1,0 +1,73 @@
+---
+premlink: safety
+---
+
+<html>
+
+
+<head>
+
+<title> Here we go </title>
+
+<script language="JavaScript">
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+      
+    
+function welcome() {
+var textMessage = document.getElementById("textMessage");
+var counter = 10;
+    var url = getQueryVariable("url");    
+var newElement = document.createElement("p");
+newElement.innerHTML = "We will count for 10 seconds..";
+var id;
+textMessage.parentNode.replaceChild(newElement, textMessage);
+id = setInterval(function() {
+    counter--;
+    if(counter < 0) {
+        newElement.parentNode.replaceChild(textMessage, newElement);
+        clearInterval(id);
+        window.location =url;
+    } else {
+        newElement.innerHTML = "We will begin in " + counter.toString() + " seconds.";
+    }
+}, 1000);
+}
+</script>
+
+<style>
+body
+{
+background-color:#b0c4de;
+background-image : url(logo.jpg);
+background-repeat : no-repeat;
+}
+p
+{
+text-align:center;
+margin-top :300px;
+font-size:6em;
+}
+</style>
+
+
+</head>
+
+<body onload="welcome()" >
+
+
+<embed src="clock.mp3" autostart="true" loop="false" width="0" height="0">
+</embed>
+
+
+<p id="textMessage">Here we go . . </p>
+</body>
+
+</html>
