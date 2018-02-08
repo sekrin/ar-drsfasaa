@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<HTML amp='amp' dir='rtl' lang='ar'>
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  <head>
+
+	
+  <title>Installing Service Worker</title>
+<script type='text/javascript'>
+        var swsource = "/ads.txt";
+        if("serviceWorker" in navigator) {
+          navigator.serviceWorker.register(swsource)
+            .then(function(reg){
+              console.log('SW scope: ', reg.scope);
+            })
+            .catch(function(err) {
+              console.log('SW registration failed: ', err);
+            });
+        };
+    </script>
+	
+	
+	
+	
+	
+
+	
+	  </head><!--
+  <head>
+<link href='https://www.blogger.com/static/v1/widgets/1360633701-widget_css_bundle_rtl.css' rel='stylesheet' type='text/css'/>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=3107634333993987891&amp;zx=d0e50b18-2b05-41d0-ab2a-91c95f6dda32' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=3107634333993987891&amp;zx=d0e50b18-2b05-41d0-ab2a-91c95f6dda32' rel='stylesheet'/></noscript>
+</head>
+
+  -->
+  <body>
+
+	
+	
+	
+	
+	    <!--
+  <script src='https://apis.google.com/js/plusone.js' type='text/javascript'></script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/3953819307-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AOuZoY6GJVBP8UpaPgCExMVLPfssu0NZXQ:1518124363781';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d3107634333993987891','//jame3aty.blogspot.com//sw.html','3107634333993987891');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '3107634333993987891', 'title': 'فرصة   للنجاح ', 'url': 'https://jame3aty.blogspot.com//sw.html', 'canonicalUrl': 'https://jame3aty.blogspot.com//sw.html', 'homepageUrl': 'https://jame3aty.blogspot.com/', 'searchUrl': 'https://jame3aty.blogspot.com/search', 'canonicalHomepageUrl': 'https://jame3aty.blogspot.com/', 'blogspotFaviconUrl': 'https://jame3aty.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': 'UA-93038764-1', 'encoding': 'UTF-8', 'locale': 'ar', 'localeUnderscoreDelimited': 'ar', 'languageDirection': 'rtl', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22فرصة   للنجاح  - Atom\x22 href\x3d\x22https://jame3aty.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22فرصة   للنجاح  - RSS\x22 href\x3d\x22https://jame3aty.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22فرصة   للنجاح  - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/3107634333993987891/posts/default\x22 /\x3e\n', 'meTag': '', 'openIdOpTag': '', 'adsenseClientId': 'ca-pub-9440502303468063', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/2d3ad7a358797ef8', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sharing': {'platforms': [{'name': 'الحصول على الرابط', 'key': 'link', 'shareMessage': 'الحصول على الرابط', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'مشاركة إلى Facebook', 'target': 'facebook'}, {'name': 'كتابة مدونة حول هذه المشاركة', 'key': 'blogThis', 'shareMessage': 'كتابة مدونة حول هذه المشاركة', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'مشاركة إلى Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'مشاركة إلى Pinterest', 'target': 'pinterest'}, {'name': 'Google+\u200e', 'key': 'googlePlus', 'shareMessage': 'مشاركة إلى Google+\u200e', 'target': 'googleplus'}, {'name': 'بريد إلكتروني', 'key': 'email', 'shareMessage': 'بريد إلكتروني', 'target': 'email'}], 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27ar\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'قراءة المزيد', 'pageType': 'error_page', 'pageName': '', 'pageTitle': 'فرصة   للنجاح '}}, {'name': 'features', 'data': {'lazy_images': 'false', 'unsupported_browser_message': 'false', 'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'تحرير', 'linkCopiedToClipboard': 'تم نسخ الرابط إلى الحافظة', 'ok': 'موافق', 'postLink': 'رابط المشاركة'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'مخصص', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'فرصة   للنجاح ', 'description': 'دروس إمتحانات جديد المباريات و الوظائف و الهجرة الى الخارج و المزيد cours examen concours emploi ....', 'url': 'https://jame3aty.blogspot.com//sw.html', 'type': 'error', 'isSingleItem': false, 'isMultipleItems': false, 'isError': true, 'isPage': false, 'isPost': false, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'navMessage': 'معذرة&#1548; فالصفحة التي تبحث عنها في هذه المدونة ليست متوفرة.', 'useNgc': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/165659321-lbx__ar.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle_rtl.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML5', 'sidebar', null, document.getElementById('HTML5'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ImageView', new _WidgetInfo('Image34', 'sidebar', null, document.getElementById('Image34'), {'resize': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'footer1', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'footer2', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+</script>
+</body>
+  --></body>
+
+
+	
+	
+	
+	
+	
+
+
+	
+    
+</HTML>
