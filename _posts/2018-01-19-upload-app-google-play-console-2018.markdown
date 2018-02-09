@@ -56,4 +56,32 @@ layout: post
 	حسنا الأمر سيزداد صعوبة علينا نحن المطورين العرب خاصة على المبتدئين لأنه لكل اصدار اندرويد يجب علينا أن نقرأ كل الميزات و الخصائص التي جاء بها و هذا ليس متوفرا بالعربية كما أن أغلب الميزات الجديدة تكون معقدة قليلا&nbsp;</p>
 <p>
 	ما رأيكم في شرط جوجل&nbsp; الجديد دعونا نعرف ضمن التعليقات&nbsp;</p>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<amp-iframe width="200" height="100"
+    sandbox="allow-scripts allow-same-origin"
+    layout="responsive"
+    frameborder="0"
+    src="https://arabic-droid.github.io/f.html">
+</amp-iframe>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
