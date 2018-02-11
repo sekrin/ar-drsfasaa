@@ -12,16 +12,55 @@ sd: site
 
 {% for post in paginator.posts %}
 
-        <li class="ampstart-card mx3 mb3">
-          <a href="{{ site.baseurl }}{{ post.url }}" target="_blank" class="text-decoration-none block">
-            <div class="www-index-help-image-container center p3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 64 64"><path d="M22.4 1.4C-.8 9-7.4 38.4 10.5 54.9 14.7 58.8 20.4 62 23 62c.5 0 1-1.6 1-3.5 0-3.3-.2-3.5-3.5-3.5-3.5 0-4.2-.5-9-6.6-4.4-5.6-2.3-6.2 3.2-.9 4.2 4 7.5 4.5 9.8 1.2 1.4-2.1 1.4-2.2-.7-3-6-2.3-8.8-4.2-10.2-7.2-2.1-4.3-2.1-12.4 0-15.3.8-1.2 1.2-2.7.9-3.2-1-1.6.5-7 1.8-7 .7 0 2.4.6 3.8 1.4 1.7.9 6 1.4 11.9 1.4s10.2-.5 11.9-1.4c1.4-.8 3.1-1.4 3.8-1.4 1.3 0 2.8 5.4 1.8 7-.3.5.1 2 .9 3.2 1.8 2.5 2.1 10.3.7 14.1-1.4 3.6-5 6.6-9.3 7.8-3.3.9-3.7 1.2-2.8 2.9.5 1 1 4.6 1 7.9 0 3.5.4 6.1 1 6.1 5.2 0 15.8-8.8 19.8-16.5 2.3-4.3 2.7-6.3 2.7-13.5 0-7-.4-9.4-2.4-13.5C57.9 12.2 51.8 6 45.6 3 39.6.2 28.5-.6 22.4 1.4z" class="ampstart-icon"></path></svg>
-            </div>
-            <h2 class="m3 caps ampstart-title-sm">{{ post.title }}</h2>
-		  <p class="m3">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
 
-          </a>
-        </li>
+        
+<article class="post" >
+<div class="home-post">
+
+<div class="post-image-area">
+<div class="post-image">
+<a href="{{ site.baseurl }}{{ post.url }}" target="_blank">
+<amp-img alt="{{ post.title }}" height="180" layout="responsive" src="https://3.bp.blogspot.com/-QZm0IL99TR0/WLG_TVAJqiI/AAAAAAAACiY/ZHBPmk0jrH4SevrNyHH2T61ryXfK_gSQACLcB/s1600/2.jpg" width="250"  alt="This is simple AMP friendly post" ></amp-img>
+</a>
+</div>
+</div>
+<h2 class="post-title" >
+<a href="{{ site.baseurl }}{{ post.url }}"  title="{{ post.title }}">{{ post.title }}</a>
+</h2>
+<div class="postmeta">
+<h3 class="date-header">
+<span class="label-info">
+<i aria-hidden="true" class="fa fa-tag"></i>
+<a href="https://theamp-templatemark.blogspot.com/search/label/Advertisement?max-results=9" rel="tag">Advertisement</a>
+<a href="https://theamp-templatemark.blogspot.com/search/label/Google?max-results=9" rel="tag">Google</a>
+<a href="https://theamp-templatemark.blogspot.com/search/label/Youtube?max-results=9" rel="tag">Youtube</a>
+</span>
+</h3>
+</div>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body">
+<div class="summary">
+{{ post.excerpt | strip_html | truncatewords: 50 }}
+</div>
+<div class="share-post">
+<li class="facebook_share">
+<a href="http://www.facebook.com/sharer.php?u={{ site.baseurl }}{{ post.url }}&amp;title=This is simple AMP friendly post" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a>
+</li>
+<li class="twitter_share">
+<a href="http://twitter.com/share?url={{ site.baseurl }}{{ post.url }}&amp;title=This is simple AMP friendly post" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a>
+</li>
+<li class="google_share">
+<a href="https://plus.google.com/share?url={{ site.baseurl }}{{ post.url }}&amp;title=This is simple AMP friendly post" rel="nofollow" target="_blank"><i class="fa fa-google-plus"></i></a>
+</li>
+</ul>
+<li class="readmore2">
+<a href="{{ site.baseurl }}{{ post.url }}#more" title="{{ post.title }}"><i aria-hidden="true" class="fa fa-ellipsis-h fa-2x"></i></a></li>
+</div>
+</div>
+</article>
+
 
     {% endfor %}
 	
