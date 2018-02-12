@@ -8,24 +8,68 @@ sd: site
 
   	  	<div class="left-column">
 
--      <ul class="list-reset flex flex-wrap justify-center">
 
 {% for post in paginator.posts %}
 
-        <li class="ampstart-card mx3 mb3">
-          <a href="{{ site.baseurl }}{{ post.url }}"  class="text-decoration-none block">
-            <div class="www-index-help-image-container center p3">
 
-	</div>
-            <h2 class="m3 caps ampstart-title-sm">{{ post.title }}</h2>
-		  <div class="summary">{{ post.excerpt | strip_html | truncatewords: 50 }}</div>
 
-          </a>
-        </li>
+<article class="post" >
+<div class="home-post">
+
+
+<div class="post-image-area">
+<div class="post-image">
+<a href="https://theamp-templatemark.blogspot.com/2017/02/this-is-simple-amp-friendly-post.html" target="_blank">
+<amp-img alt="{{ post.title }}" height="180" layout="responsive" src="https://3.bp.blogspot.com/-QZm0IL99TR0/WLG_TVAJqiI/AAAAAAAACiY/ZHBPmk0jrH4SevrNyHH2T61ryXfK_gSQACLcB/s1600/2.jpg" width="250" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout"><i-amphtml-sizer style="display: block; padding-top: 72%;"></i-amphtml-sizer><img decoding="async" alt="{{ post.title }}" class="i-amphtml-fill-content i-amphtml-replaced-content" src="https://3.bp.blogspot.com/-QZm0IL99TR0/WLG_TVAJqiI/AAAAAAAACiY/ZHBPmk0jrH4SevrNyHH2T61ryXfK_gSQACLcB/s1600/2.jpg"></amp-img>
+</a>
+</div>
+</div>
+<h2 class="post-title entry-title" >
+<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+</h2>
+<div class="postmeta">
+<h3 class="date-header">
+
+<span class="label-info">
+<i aria-hidden="true" class="fa fa-tag"></i>
+<a href="https://theamp-templatemark.blogspot.com/search/label/Advertisement?max-results=9" rel="tag">Advertisement</a>
+<a href="https://theamp-templatemark.blogspot.com/search/label/Google?max-results=9" rel="tag">Google</a>
+<a href="https://theamp-templatemark.blogspot.com/search/label/Youtube?max-results=9" rel="tag">Youtube</a>
+</span>
+</h3>
+</div>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-1596211859994005215" itemprop="articleBody">
+<div class="summary">
+{{ post.excerpt | strip_html | truncatewords: 50 }}
+</div>
+<div class="share-post">
+<ul class="entry-share-list clearfix">
+<li class="facebook_share">
+<a href="http://www.facebook.com/sharer.php?u=https://theamp-templatemark.blogspot.com/2017/02/this-is-simple-amp-friendly-post.html&amp;title={{ post.title }}" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a>
+</li>
+<li class="twitter_share">
+<a href="http://twitter.com/share?url=https://theamp-templatemark.blogspot.com/2017/02/this-is-simple-amp-friendly-post.html&amp;title={{ post.title }}" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a>
+</li>
+<li class="google_share">
+<a href="https://plus.google.com/share?url=https://theamp-templatemark.blogspot.com/2017/02/this-is-simple-amp-friendly-post.html&amp;title={{ post.title }}" rel="nofollow" target="_blank"><i class="fa fa-google-plus"></i></a>
+</li>
+</ul>
+<li class="readmore2">
+<a href="https://theamp-templatemark.blogspot.com/2017/02/this-is-simple-amp-friendly-post.html#more" title="{{ post.title }}"><i aria-hidden="true" class="fa fa-ellipsis-h fa-2x"></i></a></li>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</article>
+
+
+
     {% endfor %}
 	
 	
-	      </ul>
   
 
     
