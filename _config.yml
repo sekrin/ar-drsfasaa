@@ -1,11 +1,15 @@
 # Site settings
 title: Awesome Site Title
+headline:
 description: >
   Awesome site description here
 logo: "/assets/images/logo.jpg"
+site_image:
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://arabic-droid.github.io" # the base hostname & protocol for your site
-paginate:	5 # The number of posts to show per page on your homepage
+url: "https://arabic-droid.github.io"
+lang:
+theme_color:
+paginate:	5 
 
 
 author:
@@ -15,6 +19,7 @@ facebook_admin:
 facebook_id:
 twitter_username:
 facebook_profile:
+google_plus:
 google_analytics: ""
 
 
