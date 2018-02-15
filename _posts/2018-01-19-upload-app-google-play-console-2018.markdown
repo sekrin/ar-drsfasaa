@@ -1,15 +1,16 @@
 ---
 title: جوجل تضع شرطا جديدا لرفع تحديثات تطبيقك لجوجل بلاي
 date: 2018-01-19 00:00:00 Z
-permalink: upload-app-google-play-console-2018
+permalink: لجوجل-تطبيقك-تحديثات-جوجل-console-2018
+category:
 tags:
 - news
-header-img: img/404.jpg
-image: img/404.jpg
-author: Adhy Suryadi
-social-js: https://cdn.ampproject.org/v0/amp-social-share-0.1.js
-iframe-js: https://cdn.ampproject.org/v0/amp-iframe-0.1.js
+bg:
 layout: post
+sosial:
+breadcrumb:
+keywords:
+headline:
 ---
 
 
