@@ -1,6 +1,5 @@
 # Site settings
 title: Awesome Site Title
-email: your-email@domain.com
 description: >
   Awesome site description here
 logo: "/assets/images/logo.jpg"
@@ -9,23 +8,21 @@ url: "https://arabic-droid.github.io" # the base hostname & protocol for your si
 paginate:	5 # The number of posts to show per page on your homepage
 
 
+author:
+email: your-email@domain.com
 disqus_name:
 facebook_admin:
 facebook_id:
 twitter_username:
 facebook_profile:
+google_analytics: ""
 
 
-name: 'Your Name'
-bio: >
+author_bio: >
   Mea suas vituperatoribus et, virtute corpora quaestio cum ut.
   Ne solet nostrum complectitur pri, vis ut inani populo.
 author_image: "/assets/images/author.jpg"
-twitter_username: jekyllrb
-github_username:  jekyll
 
-# Google Analytics
-analytics_id: ""
 
 # Build settings
 markdown: kramdown
