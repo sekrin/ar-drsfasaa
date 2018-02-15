@@ -17,12 +17,38 @@
 
     <link rel="manifest" href="/manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/120.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/152.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="/assets/img/icons/167.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/180.png">
-  
-  
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/logo.jpg">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/logo.jpg">
+  <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/logo.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.jpg">
+  <!-- [ color status-bar in mobile ] -->
+<!-- [ color status-bar in mobile ] -->
+
+<meta content="#303F9F" name="theme-color">
+<meta content="#303F9F" name="msapplication-TileColor">
+<meta content="#303F9F" name="msapplication-navbutton-color">
+<meta content="#303F9F" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="mobile-web-app-capable">
+<meta content="yes" name="apple-mobile-web-app-capable">
+
+
+
+
+
+<!-- [ Speed up prefetch ] -->
+
+<link href="https:cdn.rawgit.com" rel="dns-prefetch">
+<link href="https:cdn.ampproject.org" rel="dns-prefetch">
+<link href="https:ajax.googleapis.com" rel="dns-prefetch">
+<link href="https:disqus.com" rel="dns-prefetch">
+<link href="https:connect.facebook.net" rel="dns-prefetch">
+
+
+
+
+
+	
+	
   
   <meta content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" property="og:title">
     <meta content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" property="og:url">
@@ -44,20 +70,30 @@
   
   <script type="application/ld+json">
 { "@context": "http://schema.org", 
- "@type": "Blog",
- "keywords": "software engineering agile refactoring c# ruby javascript", 
- "url": "https://arabic-droid.github.io",
+ "@type": "Webpage",
+ "headline": "{{ site.headline }}", 
+  "description": "{{ site.description }}", 
+ "url": "{{ site.url }}",
  "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://arabic-droid.github.io"
+    "@id": "{{ site.url }}"
   },
+      "image": {
+      "@type": "ImageObject",
+      "url": "{{ site.site_image }}",
+      "width": 1200,
+      "height": 600
+    },
+  
+  
+  
+  
  "author": {
     "@type": "Person",
-    "name": "مطور اندرويد",
+    "name":"{{ site.author }}",
     "sameAs": [
-        "https://twitter.com/pauldambra",
-        "https://github.com/pauldambra",
-        "https://plus.google.com/u/0/+PaulDAmbraPlus"
+        "https://twitter.com/{{ site.twitter_username }}",
+        "https://plus.google.com/u/0/+{{ site.google_plus }}"
     ]
     
   }
@@ -97,18 +133,42 @@
   </style>
 
 	  <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+ 
+	
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>	 
+
+ <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>	 
+
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>	 
+
+      <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script>	 
 
 	
 	
+      {% if page.carousel %}  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>	  {% endif %}
 	
-    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-  <script async src="https://arabic-droid.github.io/v0.js"></script>
-  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-  <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
-  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-	<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+        {% if page.form %}  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>	  {% endif %}
+
+      {% if page.accordion %}  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>	  {% endif %}
+
+      {% if page.serviceworker %}  <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>	  {% endif %}
+
+  
+    {% if page.facebook %}  <script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>	  {% endif %}
+
+
+    {% if page.gist %}  <script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>	  {% endif %}
+
+    {% if page.youtube %}  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>	  {% endif %}
+
+    {% if page.twitter %}  <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>	  {% endif %}
+
+{% if page.facebook-comments %}    <script async custom-element="amp-facebook-comments" src="https://cdn.ampproject.org/v0/amp-facebook-comments-0.1.js"></script>  {% endif %}
+
+{% if site.push %}  <script async custom-element="amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"></script> {% endif %}
+
+
 
 
 </head>
