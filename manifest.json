@@ -1,8 +1,12 @@
+---
+layout: null
+---
+
 {
-  "name": "James Ives | Full-Stack Developer",
-  "short_name": "James Ives",
-  "theme_color": "#1c202f",
-  "background_color": "#1c202f",
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.title }}",
+  "theme_color": "{{ site.theme_color }}",
+  "background_color": "{{ site.theme_color }}",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/",
