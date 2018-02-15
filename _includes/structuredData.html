@@ -8,41 +8,39 @@
    "genre":"{{ include.category }}",
    "keywords":"{{ include.keywords }}",
    "wordCount":"{{ wordcount }}",
-   "url":"https://pauldambra.github.io{{ include.link }}",
+   "url":"{{ site.author }}{{ include.link }}",
    "datePublished":"{{ include.date | | date: '%Y-%m-%d' }}",
    "author":{  
       "@type":"Person",
-      "name":"Paul D'Ambra",
+      "name":"{{ site.author }}",
       "sameAs":[  
-        "https://twitter.com/pauldambra",
-        "https://github.com/pauldambra",
-        "https://plus.google.com/u/0/+PaulDAmbraPlus"
+      "https://twitter.com/{{ site.author }}",
+        "https://plus.google.com/u/0/+{{ site.google_plus  }}"
       ]
    },
    "publisher":{  
       "@type":"Organization",
-      "name":"Paul D'Ambra",
+      "name":"{{ site.author }}",
       "sameAs":[  
-        "https://twitter.com/pauldambra",
-        "https://github.com/pauldambra",
-        "https://plus.google.com/u/0/+PaulDAmbraPlus"
+        "https://twitter.com/{{ site.author }}",
+        "https://plus.google.com/u/0/+{{ site.google_plus  }}"
       ],
       "logo": {
   		"@type": "ImageObject",
-  		"contentUrl": "https://pauldambra.github.io/images/logo.png",
-  		  "url": "https://pauldambra.github.io"
+  		"contentUrl": "{{ site.author_image }}",
+  		  "url": "{{ site.author }}"
     }
    },
    "image":{  
       "@type":"ImageObject",
-      "contentUrl":"https://pauldambra.github.io/images/cardboard.jpg",
-      "url":"https://pauldambra.github.io",
+      "contentUrl":"{{ site.google_plus  }}",
+      "url":"{{ include.bg}}",
       "height":"450",
       "width":"1000"
    },
    "mainEntityOfPage":{  
       "@type":"WebPage",
-      "@id":"https://pauldambra.github.io{{ include.link }}"
+      "@id":"{{ site.google_plus  }}{{ include.link }}"
    },
    "articleBody":"{{ include.content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}"
 }
