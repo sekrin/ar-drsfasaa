@@ -1,0 +1,65 @@
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<link href='https://www.ampproject.org/manifest.json' rel='manifest'>
+
+  <meta name="amp-experiments-opt-in" content="url-replacement-v2">
+  
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" href="/assets/img/icons/favicon.png">
+
+    <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/logo.jpg">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/logo.jpg">
+  <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/logo.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.jpg">
+  <!-- [ color status-bar in mobile ] -->
+<!-- [ color status-bar in mobile ] -->
+
+<meta content="{{ site.theme_color }}" name="theme-color">
+<meta content="{{ site.theme_color }}" name="msapplication-TileColor">
+<meta content="{{ site.theme_color }}" name="msapplication-navbutton-color">
+<meta content="{{ site.theme_color }}" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="mobile-web-app-capable">
+<meta content="yes" name="apple-mobile-web-app-capable">
+
+
+
+
+
+<!-- [ Speed up prefetch ] -->
+
+<link href="https:cdn.rawgit.com" rel="dns-prefetch">
+<link href="https:cdn.ampproject.org" rel="dns-prefetch">
+<link href="https:ajax.googleapis.com" rel="dns-prefetch">
+<link href="https:disqus.com" rel="dns-prefetch">
+<link href="https:connect.facebook.net" rel="dns-prefetch">
+
+
+
+
+
+	
+	
+  
+  <meta content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" property="og:title">
+    <meta content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" property="og:url">
+    <meta content="{{ site.title }}" property="og:site_name">
+    {% if page.title %}<meta content="article" property="og:type">{% else %}<meta content="website" property="og:type">{% endif %}
+    <meta content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" property="og:description">
+    <meta content="{{site.url}}{{ site.baseurl }}/{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}" property="og:image">
+    <meta content="{{ site.facebook_admin }}" property="fb:admins">
+    <meta content="{{ site.facebook_id}}" property="fb:profile_id">
+    <meta content="{{ site.author }}" name="Author">
+  <meta content="{{ site.facebook_profile }}" property="article:author">
+    <meta content="{{ site.title }}" name="twitter:site">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="@{{ site.twitter_username }}" name="twitter:creator">
+  
