@@ -1,20 +1,51 @@
-<ol class="breadcrumb">
-<li><a href="{{ site.baseurl }}/">Home</a></li>
-{% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
-{% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
-{% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:1 }}{% endcapture %}
-{% for i in (1..forLoopMaxInt) %}
-    {% capture current_breadcrumb_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/index.html{% endcapture %}
-    {% capture current_breadcrumb_md_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/{% endcapture %}
-    {% capture next_prepender %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
-    {% for breadcrumb_page in site.pages %}
-        {% if current_breadcrumb_url == breadcrumb_page.url or current_breadcrumb_md_url == breadcrumb_page.url  %}
-        {% assign j = forLoopMaxInt | plus: 0 %}
-            <li {% if i == j %}class="active"{% endif %}>
-                {% capture breadcrumb_page_page_url_without_index_html %}{{ breadcrumb_page.url | remove: "index.html" }}{% endcapture %}
-                <a href="{{ site.baseurl }}{{breadcrumb_page_page_url_without_index_html}}">{{breadcrumb_page.breadcrumb}}</a>
-            </li>
-        {% endif %}
-    {% endfor %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+  
+  
+  {
+    "@type": "ListItem",
+    "position": 1 ,
+    "item": {
+      "@id": "https://example.com/",
+      "name": "Home",
+      "image": "http://example.com/images/icon-book.png"
+    }
+  }
+ 
+  
+  
+  {% assign position = 1 %}
+
+  
+  
+  {% for tag in page.tags %} 
+  
+  
+  
+ , {
+    "@type": "ListItem",
+    "position": {%  position | plus: 1 %} ,
+    "item": {
+      "@id": "https://example.com/tags/{{ tag }}",
+      "name": "{{ tag }}",
+      "image": "http://example.com/images/icon-book.png"
+    }
+  }
+ 
+
+
+
 {% endfor %}
-</ol>
+
+
+
+
+
+
+ ]
+}
+</script>
