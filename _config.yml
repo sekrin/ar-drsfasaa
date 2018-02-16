@@ -7,15 +7,17 @@ logo: "/assets/images/logo.jpg"
 site_image:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arabic-droid.github.io"
-lang:
+lang: en
 theme_color:
+
 paginate:	5 
+permalink: "/:title"
 
 
-author:
-email: your-email@domain.com
+author: Ismail ezzaki
+email: ismailezzaki96@gmail.com
 disqus_name:
-facebook_admin:
+facebook_admin: ismail.zaki.100
 facebook_id:
 twitter_username:
 facebook_profile:
@@ -31,7 +33,7 @@ author_image: "/assets/images/author.jpg"
 
 # Build settings
 markdown: kramdown
-
+highlighter: rouge
 kramdown:
   parse_block_html: true
 
