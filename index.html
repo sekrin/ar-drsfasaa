@@ -10,7 +10,6 @@ layout: default
 
 
 {% for post in paginator.posts %}
-
 <div class="post-outer">
    <article class="post ">
       <div class="post-info2">
@@ -32,7 +31,7 @@ layout: default
       <a href="{{ site.baseurl }}{{ post.url }}">
          <div class="post-image fade-in one">
             <span class="overlay"></span>
-        <img width="300" height="200" src="https://2.bp.blogspot.com/-0uSTnSOTFjs/V8F-21x4KeI/AAAAAAAACU0/2XosiHKfvTImJBWrC4mwAeERwFzQALaHQCLcB/w300-h200-c/legs-434918_960_720.jpg" alt="{{ post.title }}" title="{{ post.title }}">
+        <amp-img width="300" height="200" src="https://2.bp.blogspot.com/-0uSTnSOTFjs/V8F-21x4KeI/AAAAAAAACU0/2XosiHKfvTImJBWrC4mwAeERwFzQALaHQCLcB/w300-h200-c/legs-434918_960_720.jpg" alt="{{ post.title }}" title="{{ post.title }}">
          </div>
       </a>
       <div class="post-body" >
@@ -43,10 +42,7 @@ layout: default
       <div class="share-post">
          <a class="readmore2" href="{{ site.baseurl }}{{ post.url }}#more" title="{{ post.title }}"> Continue Reading <i class="fa fa-long-arrow-right"></i></a>
       </div>
-      <div style="clear: both;"></div>
    </article>
-   <div style="clear: both;"></div>
-   <div style="clear:both;"></div>
 </div>
 
     {% endfor %}
