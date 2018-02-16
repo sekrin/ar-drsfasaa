@@ -8,8 +8,8 @@
         "image": {
         	"@type": "imageObject",
             "@id": "header_website_picture",
-            "url": "{{site.image}}",
-            "height": "200",
+            "url": "{{site.site_image}}",
+            "height": "400",
             "width": "400"
         }
     },
@@ -65,36 +65,36 @@
     "image":[
 	    {  
 	        "@type":"imageObject",
-	        "url":"{{site.image}}",
-	        "height":"200",
+	        "url":"{{site.site_image}}",
+	        "height":"400",
 	        "width":"400",
 	        "isFamilyFriendly":"yes"
 	    }
 	],
     "potentialAction": {
         "@type": "SearchAction",
-        "target": "{{site.url}}/search.php?q={search_term}",
+        "target": "https://www.google.com/search?q={search_term}&as_sitesearch={{site.url}}",
         "query-input": "required name=search_term"
     },
-    "copyrightYear":"2016",
-    "datePublished":"August 27, 2016",
-    "dateModified":"October 16, 2016",
+    "copyrightYear":"{{ 'now' | date: "%Y" }}",
+    "datePublished":"August 27, 2009",
     "isBasedOnUrl":"https://schema.org",
-    "name":"JSON-LD Examples",
-    "inLanguage":"en-US",
+    "name":"{{site.title}}",
+    "inLanguage":"{{site.lang}}",
     "isFamilyFriendly":"yes",
-    "keywords":"JSON-LD Examples, schema.org",
+	
+    "keywords":"{{site.title}} {% for keyword in site.keywords %} ,{{ tag }} {% endfor %}",
     "url":"{{site.url}}/",
-    "description":"The most complete JSON-LD Examples for marking up your entire website with schema.org."
+    "description":"{{site.description}}"
 	}
 }</script>
 <script type="application/ld+json">{
     "@context":"http://www.schema.org",  
         "@type":"Organization",
         "@id": "{{site.url}}#organization",
-        "name":"JSON-LD Examples",
+        "name":"{{site.title}}",
         "url":"{{site.url}}",
-        "email": "webmaster@jsonld-examples.com",
+        "email": "{{site.email}}",
         "numberOfEmployees": "1",
         "employee":{
         	"@type": "Person",
@@ -106,24 +106,24 @@
          },
         "logo":{  
             "@type":"ImageObject",
-            "url":"https://jsonld-examples.net/images/logo.png",
-            "width":"600",
+            "url":"{{site.logo}}",
+            "width":"60",
             "height":"60"
         },
         "image":{  
             "@type":"ImageObject",
-            "url":"https://jsonld-examples.net/images/image.png",
-            "width":"1024",
-            "height":"768"
+            "url":"{{site.site_image}}",
+            "width":"400",
+            "height":"400"
         },
-        "description":"3rd party site dedicated to schema.org and JSON-LD. Providing high quality minimum and recommended markups, as well as blog about JSON-LD and schema.org",
+        "description":"{{site.description}}",
         "sameAs": [
-        	"https://www.facebook.com/jsonldexamples/",
-        	"https://plus.google.com/+Jsonldexamples",
-            "https://twitter.com/JSONLDExamples",
-            "https://github.com/jsonld-markups",
-            "https://www.pinterest.com/jsonld/",
-            "https://json-ldexamples.tumblr.com/"
+        	"https://www.facebook.com/{{site.facebook_profile}}",
+        	"https://plus.google.com/+{{site.google_plus}}",
+            "https://twitter.com/{{site.google_plus}}",
+            "https://github.com/{{site.github}}",
+            "https://www.pinterest.com/{{site.pinterest}}/",
+            "https://{{site.tumblr}}.tumblr.com/"
         ]
 }</script>
 
@@ -139,29 +139,29 @@
     {  
         "@context":"https://schema.org",
         "@type":"WPHeader",
-        "@id":"{{site.url}}/schema.org/code/article-markup.php#header_website",
+        "@id":"{{page.permalink}}#header_website",
         "image": {
         	"@type": "imageObject",
-            "@id": "{{site.url}}/schema.org/code/article-markup.php#header_website_picture",
-            "url": "{{site.image}}",
-            "height": "200",
+            "@id": "{{page.permalink}}#header_website_picture",
+            "url": "{{site.site_image}}",
+            "height": "400",
             "width": "400"
         }
     },
     {  
         "@context":"https://schema.org",
         "@type":"WPSideBar",
-        "@id":"{{site.url}}/schema.org/code/article-markup.php#sidebar_left"
+        "@id":"{{page.permalink}}#sidebar_left"
     },
     {  
         "@context":"https://schema.org",
         "@type":"WPSideBar",
-        "@id":"{{site.url}}/schema.org/code/article-markup.php#sidebar_right"
+        "@id":"{{page.permalink}}#sidebar_right"
     },
     {  
         "@context":"https://schema.org",
         "@type":"WPFooter",
-        "@id":"{{site.url}}/schema.org/code/article-markup.php#footer_website"
+        "@id":"{{page.permalink}}#footer_website"
     }
 ]</script>
 
@@ -171,49 +171,49 @@
     "hasPart":[  
         {  
             "@type":"WPHeader",
-            "@id":"{{site.url}}/schema.org/code/article-markup.php#header_website"
+            "@id":"{{page.permalink}}#header_website"
         },
         {  
             "@type":"WPSideBar",
-            "@id":"{{site.url}}/schema.org/code/article-markup.php#sidebar_left"
+            "@id":"{{page.permalink}}#sidebar_left"
         },
         {  
             "@type":"WPSideBar",
-            "@id":"{{site.url}}/schema.org/code/article-markup.php#sidebar_right"
+            "@id":"{{page.permalink}}#sidebar_right"
         },
         {  
             "@type":"WPFooter",
-            "@id":"{{site.url}}/schema.org/code/article-markup.php#footer_website"
+            "@id":"{{page.permalink}}#footer_website"
         }
     ],
     "Publisher":{  
         "@type":"Organization",
         "@id": "{{site.url}}#organization",
-        "name":"JSON-LD Examples",
+        "name":"{{site.title}}",
         "url":"{{site.url}}"
     },
     "Author":{  
         "@type":"person",
-        "name":"Andrew Ders Smith"
-    },
+        "name":"{{site.author}}"
+		},
     "image":[
 	    {  
 	        "@type":"imageObject",
-	        "url":"{{site.url}}/images/social/big-Article.png",
+	        "url":"{{page.image}}",
 	        "height":"630",
 	        "width":"1200",
 	        "isFamilyFriendly":"yes"
 	    },
 	    {  
 	        "@type":"imageObject",
-	        "url":"{{site.url}}/images/social/medium-Article.png",
+	        "url":"{{page.image}}",
 	        "height":"220",
 	        "width":"440",
 	        "isFamilyFriendly":"yes"
 	    },
 	    {  
 	        "@type":"imageObject",
-	        "url":"http://jsonld-examples.com/images/social/small-Article.png",
+	        "url":"{{page.image}}",
 	        "height":"150",
 	        "width":"150",
 	        "isFamilyFriendly":"yes"
@@ -222,65 +222,62 @@
     "breadcrumb":{  
         "@type":"BreadcrumbList",
         "itemListElement":[  
-            {  
-                "@type":"ListItem",
-                "position":"1",
-                "item":{  
-                    "@type":"WebSite",
-                    "@id":"{{site.url}}/",
-                    "name":"JSON-LD Examples",
-                    "image": "{{site.url}}/images/thumbnails/WebSite-thumbnail.png"
-                }
-            },
-            {  
-                "@type":"ListItem",
-                "position":"2",
-                "item":{  
-                    "@type":"WebPage",
-                    "@id":"{{site.url}}/schema.org/code/article-markup.php",
-                    "name":"Schema.org",
-                    "image":"{{site.url}}/images/thumbnails/Schema-thumbnail.png"
-                }
-            }
+
+
+
+{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "{{site.url}}",
+      "name": "home",
+      "image": "{{site.url}}/assets/images/logo.jpg"
+    }
+  }
+        {% assign position = 1 %}
+  
+  
+  
+  
+  
+  
+  {% for tag in page.tags %}
+    {% assign position =  position | plus: 1 %}
+  
+  
+  
+  ,{
+    "@type": "ListItem",
+    "position": {{position}},
+    "item": {
+      "@id": "{{site.url}}books/tags/{{ tag }}",
+      "name": "{{ tag }}",
+      "image": "{{site.url}}/assets/images/logo.jpg"
+    }
+  }
+  
+  
+  {% endfor %}
+
+
+
+
+
         ]
     },
     "mainEntity":{  
         "@type":"TechArticle",
-        "@id": "{{site.url}}/schema.org/code/article-markup.php#main_content",
-        "about": [
-            {
-            "@type": "SoftwareSourceCode",
-            "@id": "{{site.url}}/schema.org/code/article-markup.php#codeOne",
-            "codeSampleType": "Template",
-            "description": "Basic schema.org/Article markup with JSON-LD",
-            "codeRepository": "https://github.com/jsonld-markups/Code/blob/codeRepository/Article-Minimal",
-            "author": {
-                "@type": "Person",
-                "name": "Andrew Ders Smith"
-                }  
-            },
-            {
-            "@type": "SoftwareSourceCode",
-            "@id": "{{site.url}}/schema.org/code/article-markup.php#codeTwo",
-            "codeSampleType": "Template",
-            "description": "Advanced schema.org/Article markup with JSON-LD",
-            "codeRepository": "https://github.com/jsonld-markups/Code/blob/codeRepository/Article-Advanced",
-            "author": {
-                "@type": "Person",
-                "name": "Andrew Ders Smith"
-                }
-            }
-         ]
+        "@id": "{{page.permalink}}#main_content"
       },
     "isBasedOnUrl":"https://schema.org/Article",
-    "datePublished":"August 28, 2016",
-    "dateModified":"September 21, 2016",
-    "name":"Article - JSON-LD markup. Boost your SEO with schema.org",
-    "inLanguage":"en-US",
+    "datePublished":"{{ page.date }}",
+    "dateModified":"{{ page.date }}",
+    "name":"{{page.pagetitle}}",
+    "inLanguage":"{{site.lang}}",
     "isFamilyFriendly":"yes",
-    "keywords":"JSON-LD, JSON-LD Example, schema.org, Article",
-    "url":"{{site.url}}/schema.org/code/article-markup.php",
-    "description":"How to markup schema.org/Article using JSON-LD, both minimal and advanced. Details about Article property/CreativeWork"
+    "keywords":" {{site.title}} {% for tag in page.tags %} ,{{ tag }} {% endfor %}",
+    "url":"{{page.permalink}}",
+    "description":"{{page.description}}"
     }
 }</script>
 
