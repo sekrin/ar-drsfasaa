@@ -1,93 +1,79 @@
-{%  
+  
   {% if page.sd %}
   
-  <script type="application/ld+json">
-{ "@context": "http://schema.org", 
- "@type": "Webpage",
- "headline": "{{ site.headline }}", 
-  "description": "{{ site.description }}", 
- "url": "{{ site.url }}",
- "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ site.url }}"
-  },
-      "image": {
-      "@type": "ImageObject",
-      "url": "{{ site.image }}",
-      "width": 1200,
-      "height": 600
-    },
-  
-  
-  
-  
- "author": {
-    "@type": "Person",
-    "name":"{{ site.author }}",
-    "sameAs": [
-        "https://twitter.com/{{ site.twitter_username }}",
-        "https://plus.google.com/u/0/+{{ site.google_plus }}"
-    ]
-    
-  }
- }
+ <script type="application/ld+json">{
+"@context": "http://schema.org",
+"@type": "WebSite",
+"name": "",
+"url": "",
+"sameAs": ["https://facebook.com/page", "https://plus.google.com/site", "https://twitter.com/name"],
+"potentialAction": {
+"@type": "SearchAction",
+"target": "http://example.com/pages/search_results?q={search_term}",
+"query-input": "required name=search_term"
+}
+}
 </script>
   
   
   {% else %}
 
 
-	
+<script type="application/ld+json">{
+"@context": "http://schema.org",
+"@type": "WebPage",
+"name": "A name. I use same as title tag",
+"url": "http://example.com",
+"description": "Description. I just use the same description as meta data",
+"breadcrumb":{
+"@type":"BreadcrumbList",
+"itemListElement":[
+{
+"@type":"ListItem",
+"position":"1",
+"item":{
+"@type":"WebSite",
+"@id":"http://example.com",
+"name":"Home"
+}
+},
+{
+"@type":"ListItem",
+"position":"2",
+"item":{
+"@type":"WebPage",
+"@id":"http://example.com/thispage",
+"name":"Same name from above"
+}
+}
+]},
+"mainEntity": {
+"@type": "Article",
+"@id": "http://example.com/thispage#ArticleID",
+"author": "Author Name",
+"datePublished": "3 September, 2016",
+"dateModified": "3 September, 2016",
+"mainEntityOfPage": "http://example.com",
+"headline": "Headline. H1 of Article",
+"image": {
+"@type": "imageObject",
+"url": "http://example.com/image.png",
+"height": "500",
+"width": "300"
+},
+"publisher": {
+"@type": "Organization",
+"name": "Your Name",
+"logo": {
+"@type": "imageObject",
+"url": "http://example.com/logo.png"
+}
+}
+}
+}</script>	
 	
 	
   {% endif %}
  
-  
 
-assign wordcount = include.content | number_of_words %}
-
-<script type="application/ld+json">
-{  
-   "@context":"http://schema.org",
-   "@type":"BlogPosting",
-   "headline":"{{ include.headline }}",
-   "genre":"{{ include.category }}",
-   "keywords":"{{ include.keywords }}",
-   "wordCount":"{{ wordcount }}",
-   "url":"{{ site.author }}{{ include.link }}",
-   "datePublished":"{{ include.date | | date: '%Y-%m-%d' }}",
-   "author":{  
-      "@type":"Person",
-      "name":"{{ site.author }}",
-      "sameAs":[  
-      "https://twitter.com/{{ site.author }}",
-        "https://plus.google.com/u/0/+{{ site.google_plus  }}"
-      ]
-   },
-   "publisher":{  
-      "@type":"Organization",
-      "name":"{{ site.author }}",
-      "sameAs":[  
-        "https://twitter.com/{{ site.author }}",
-        "https://plus.google.com/u/0/+{{ site.google_plus  }}"
-      ],
-      "logo": {
-  		"@type": "ImageObject",
-  		"contentUrl": "{{ site.author_image }}",
-  		  "url": "{{ site.author }}"
-    }
-   },
-   "image":{  
-      "@type":"ImageObject",
-      "contentUrl":"{{ site.google_plus  }}",
-      "url":"{{ include.bg}}",
-      "height":"450",
-      "width":"1000"
-   },
-   "mainEntityOfPage":{  
-      "@type":"WebPage",
-      "@id":"{{ site.google_plus  }}{{ include.link }}"
-   },
-   "articleBody":"{{ include.content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}"
-}
 </script>
