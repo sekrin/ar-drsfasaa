@@ -18,19 +18,18 @@
  
   
   
-  {% assign position = 1 %}
 
   
   
-  {% for tag in post.tags %} 
+  {% for tag in page.tags %} 
   
   
   
  , {
     "@type": "ListItem",
-    "position": {%  position | plus: 1 %} ,
+    "position":  "1" ,
     "item": {
-      "@id": "https://example.com/tags/{{ tag }}",
+      "@id": "https://example.com/tagfs/{{ tag }}",
       "name": "{{ tag }}",
       "image": "http://example.com/images/icon-book.png"
     }
