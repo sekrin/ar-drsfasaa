@@ -10,9 +10,24 @@
       "name": "Books",
       "image": "http://example.com/images/icon-book.png"
     }
-  },{
+  },
+  
+  
+  
+  
+  
+      {% assign position = 3 %}
+
+  
+  
+  
+  
+  
+  
+  
+  {
     "@type": "ListItem",
-    "position": 2,
+    "position": {%  position | plus: 1 %},
     "item": {
       "@id": "https://example.com/books/authors",
       "name": "Authors",
