@@ -10,30 +10,44 @@
       "name": "Books",
       "image": "http://example.com/images/icon-book.png"
     }
-  },
+  }
+        {% assign position = 1 %}
   
   
   
   
-  
-      {% assign position = 3 %}
+
 
   
   
-  
+  {% for tag in page.tags %}
+
     {% assign position =  position | plus: 1 %}
 
   
   
   
-  {
+  ,{
     "@type": "ListItem",
     "position": {{position}},
     "item": {
       "@id": "https://example.com/books/authors",
-      "name": "Authors",
+      "name": "{{ tag }}",
       "image": "http://example.com/images/icon-author.png"
     }
-  }]
+  }
+  
+  
+  {% endfor %}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  ]
 }
 </script>
