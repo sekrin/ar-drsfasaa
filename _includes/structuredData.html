@@ -1,4 +1,50 @@
-{% assign wordcount = include.content | number_of_words %}
+{%  
+  {% if page.sd %}
+  
+  <script type="application/ld+json">
+{ "@context": "http://schema.org", 
+ "@type": "Webpage",
+ "headline": "{{ site.headline }}", 
+  "description": "{{ site.description }}", 
+ "url": "{{ site.url }}",
+ "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}"
+  },
+      "image": {
+      "@type": "ImageObject",
+      "url": "{{ site.image }}",
+      "width": 1200,
+      "height": 600
+    },
+  
+  
+  
+  
+ "author": {
+    "@type": "Person",
+    "name":"{{ site.author }}",
+    "sameAs": [
+        "https://twitter.com/{{ site.twitter_username }}",
+        "https://plus.google.com/u/0/+{{ site.google_plus }}"
+    ]
+    
+  }
+ }
+</script>
+  
+  
+  {% else %}
+
+
+	
+	
+	
+  {% endif %}
+ 
+  
+
+assign wordcount = include.content | number_of_words %}
 
 <script type="application/ld+json">
 {  
