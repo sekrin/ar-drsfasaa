@@ -21,13 +21,14 @@
   
   
   
-  
+    {% assign position = position + 1 %}
+
   
   
   
   {
     "@type": "ListItem",
-    "position": {%  position | plus: 1 %},
+    "position": {{position}},
     "item": {
       "@id": "https://example.com/books/authors",
       "name": "Authors",
