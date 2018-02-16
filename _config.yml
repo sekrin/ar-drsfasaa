@@ -5,6 +5,7 @@ description: >
   Awesome site description here
 logo: "/assets/images/logo.jpg"
 site_image:
+image: # site_image
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arabic-droid.github.io"
 lang: en
@@ -22,7 +23,12 @@ facebook_id:
 twitter_username:
 facebook_profile:
 google_plus:
+github: 
+pinterest:
+tumblr:
+
 google_analytics: ""
+
 
 
 author_bio: >
