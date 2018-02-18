@@ -20,51 +20,63 @@ layout: default
         
 
           <div class="date-posts">
+ 
+    <div class="row pack">
+
+        {% for post in paginator.posts %}   
+            <div class="col-md-4 card">
+             <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
+                <div class="panel panel-default">
+                  
+                  {% if post.img %}
+                  <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                  {% else %}
+                  <img width="100%" src="{{site.baseurl}}/images/webjeda-logo-big.jpg" alt="{{site.title}}">
+                  {% endif %}
+                  
+                  <div class="panel-body">
+                    <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
+                  </div>
+                  
+                  <div class="panel-body"><small>
+                    {{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</small>
+                    Read
+                  </div>
+                </div>
+                </a>
+            </div>
         
-		
-{% for post in paginator.posts %}
-		
-<div class="post-outer">
-<article class="post ">
+          {% endfor %}
 
-<a content="https://1.bp.blogspot.com/-I_goLEJoV-I/WJ4diBTY--I/AAAAAAAAChQ/I_nRlSbPYpUlKZVuMGHzOraiZna5cT6wACK4B/s1600/facebook-reactions-760x400.jpg"></a>
-<div class="format-image hentry post-image post-format-image">
-<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
-<img alt="{{ post.title }}" itemprop="image" src="https://1.bp.blogspot.com/-I_goLEJoV-I/WJ4diBTY--I/AAAAAAAAChQ/I_nRlSbPYpUlKZVuMGHzOraiZna5cT6wACK4B/s1600/facebook-reactions-760x400.jpg" style="width:100%; height:210px" title="{{ post.title }}">
-</a>
-</div>
-<div class="clearboth"></div>
-<div class="postdata">
-<span class="label-info">
+    
+    <div class="row pack">
 
-		   {% for tag in post.tags %}
+        {% for post in paginator.posts %}   
+            <div class="col-md-4 card">
+             <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">    
+                <div class="panel panel-default">
+                  
+                  {% if post.img %}
+                  <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                  {% else %}
+                  <img width="100%" src="{{site.baseurl}}/images/webjeda-logo-big.jpg" alt="{{site.title}}">
+                  {% endif %}
+                  
+                  <div class="panel-body">
+                    <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
+                  </div>
+                  
+                  <div class="panel-body"><small>
+                    {{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</small>
+                    Read
+                  </div>
+                </div>
+                </a>
+            </div>
+        
+          {% endfor %}
 
-<a class="label-info" href="{{site.url}}/tags/{{ tag }}" rel="tag">{{ tag }}</a>
-		   {% endfor %}
-
-</span>
-<h2 class="post-title entry-title">
-<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
-{{ post.title }}
-</a>
-</h2>
-<div class="clearboth"></div>
-</div>
-<div class="post-body ">
-<div class="snippets">
- {{ post.excerpt | strip_html | truncatewords: 20 }} ...
-
-</div>
-
-</div>
-<div class="clearboth"></div>
-
-</article>
-</div>
-
-
-		   {% endfor %}
-
+    </div> 
 
 
 
