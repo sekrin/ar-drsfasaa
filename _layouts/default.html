@@ -3,7 +3,7 @@ layout:
 ---
 
 <!DOCTYPE html>
-<html amp   lang="{{ site.lang }}">
+<html amp   lang="{{ site.lang }}"       {% if {{ site.lang }} == ar %} dir=rtl  {% endif %} >
   {% include head.html %}
   <body>
     {% include header.html %}
