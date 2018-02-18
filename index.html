@@ -21,18 +21,20 @@ layout: default
 
           <div class="date-posts">
  		
+		
 {% for post in paginator.posts %}
 	  {% assign loopindex = forloop.index | modulo: 2 %}
 	
-<div class="post-outer">
 
   {% if loopindex == 1 %}
+<div class="post-outer">
 
-<article class="post ">
   {% else %}
-<article class="post odd">
+<div class="post-outer odd">
 
   {% endif %}
+  <article class="post ">
+
 <a content="https://1.bp.blogspot.com/-I_goLEJoV-I/WJ4diBTY--I/AAAAAAAAChQ/I_nRlSbPYpUlKZVuMGHzOraiZna5cT6wACK4B/s1600/facebook-reactions-760x400.jpg"></a>
 <div class="format-image hentry post-image post-format-image">
 <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
@@ -70,6 +72,8 @@ layout: default
 
 
 		   {% endfor %}
+
+
 
 
 
