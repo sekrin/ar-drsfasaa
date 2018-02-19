@@ -4,109 +4,43 @@ layout: default
 ---
 
 
-<div id="outer-wrapper">
 <div class="bwrapsite-content" id="bwrapcontent">
 
-<div class="clear"></div>
 <div class="content-area" id="primarybwrap">
 <div class="bwrapsite-main" id="mainbwrap" role="main">
-<div class="mainblogsec section" id="mainblogsec">
 
-<div class="widget Blog" data-version="1" id="Blog1">
-<div class="blog-posts hfeed">
-<!--Can't find substitution for tag [defaultAdStart]-->
 
-          <div class="date-outer">
-        
+<main class="main-area">
 
-          <div class="date-posts">
- 		
-		
+  <div class="centered">
+
+    <section class="cards">
 {% for post in paginator.posts %}
-	  {% assign loopindex = forloop.index | modulo: 2 %}
-	
 
-  {% if loopindex == 1 %}
-<div class="post-outer">
+      <article class="card">
+        <a href="#">
+          <figure class="thumbnail">
+          <img src="http://placekitten.com/810/610" alt="meow">
+          </figure>
+          <div class="card-content">
+            <h2>Whiskey</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum explicabo consequatur consectetur fugit molestias perferendis, sint error iste ut, facilis sunt natus optio dolor nesciunt laboriosam obcaecati corporis numquam.</p>
+          </div>
 
-  {% else %}
-<div class="post-outer odd">
-
-  {% endif %}
-  <article class="post ">
-
-<a content="https://1.bp.blogspot.com/-I_goLEJoV-I/WJ4diBTY--I/AAAAAAAAChQ/I_nRlSbPYpUlKZVuMGHzOraiZna5cT6wACK4B/s1600/facebook-reactions-760x400.jpg"></a>
-<div class="format-image hentry post-image post-format-image">
-<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
-<img alt="{{ post.title }}" itemprop="image" src="https://1.bp.blogspot.com/-I_goLEJoV-I/WJ4diBTY--I/AAAAAAAAChQ/I_nRlSbPYpUlKZVuMGHzOraiZna5cT6wACK4B/s1600/facebook-reactions-760x400.jpg" style="width:100%; height:210px" title="{{ post.title }}">
-</a>
-</div>
-<div class="clearboth"></div>
-<div class="postdata">
-<span class="label-info">
-
-		   {% for tag in post.tags %}
-
-<a class="label-info" href="{{site.url}}/tags/{{ tag }}" rel="tag">{{ tag }}</a>
-		   {% endfor %}
-
-</span>
-<h2 class="post-title entry-title">
-<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
-{{ post.title }}
-</a>
-</h2>
-<div class="clearboth"></div>
-</div>
-<div class="post-body ">
-<div class="snippets">
- {{ post.excerpt | strip_html | truncatewords: 20 }} ...
-
-</div>
-
-</div>
-<div class="clearboth"></div>
-
-</article>
-</div>
-
-
+		  </a>
+      </article>
 		   {% endfor %}
 
 
+    </section>
+
+  </div>
+
+  
+</main>
 
 
 
-
-            </div>
-			
-			</div>
-          
-
-
-<!--Can't find substitution for tag [adEnd]-->
-</div>
-<div class="clearboth"></div>
-
-
-
-
-<div class="blog-pager" id="blog-pager">
-<span class="showpageOf">Page 1 of 2</span><span class="showpagePoint">1</span>
-<span class="showpageNum"><a href="#" onclick="redirectpage(2);return false">2</a></span>
-<span class="showpageNum"><a href="#" onclick="redirectpage(2);return false">Next »</a></span>
-</div>
-
-
-
-
-
-
-
-
-<div class="clear"></div>
-</div></div>
-</div>
 </div>
 <div id="sidebar-wrapper" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 <div class="sidebar-area" id="sidebar" role="complementary">
@@ -130,7 +64,6 @@ layout: default
 </div>
 </div>
 </div>
-<div class="clear"></div>
 
 
 
