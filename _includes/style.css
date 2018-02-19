@@ -170,19 +170,7 @@ h2.post-title a:hover{color:#e8503c;text-decoration:none;}
 .top-social-wrapper .social-icon a{color:#353535;}
 .top-social-wrapper .social-icon a:hover{opacity:0.5;filter:alpha(opacity=100);}
 /*! CSS Used from: Embedded */
-.PopularPosts ul,.PopularPosts li,.PopularPosts li img,.PopularPosts li a,.PopularPosts li a img{margin:0;padding:0;list-style:none;border:none;background:none;outline:none;}
-.PopularPosts ul{margin:0;list-style:none;color:#333;}
-.PopularPosts ul li img{display:block;margin-right:10px;width:115px;height:100px;float:left;transition:all 0.3s ease-out;}
-.PopularPosts ul li img:hover{background:#fff;opacity:0.9;}
-.PopularPosts ul li{background-color:#fff;margin:2px;padding:0;position:relative;transition:all 0.3s ease-out;border-bottom:1px solid rgb(239, 239, 239);}
-.PopularPosts ul li:first-child{border-top:none;,margin:0;}
-.PopularPosts ul li:last-child{border-bottom:none;padding-bottom:0;}
-.PopularPosts ul li a:hover{color:#f56954;}
-.PopularPosts ul li .item-title a,.PopularPosts ul li a{color:#333;text-decoration:none;font-size:15px;font-weight:600;transition:all 0.3s ease-out;font-family:'Roboto', 'sans-serif';line-height:1;text-align:justify;}
-.PopularPosts ul li:before{display:none;list-style:none;}
-.PopularPosts .item-thumbnail{margin:0 0 0 0;}
-.PopularPosts .item-snippet{font-size:13px;color:#7b7b7b;font-weight:400;line-height:1.5;}
-.PopularPosts .item-title{margin-bottom:2px;line-height:1.2;}
+
 #header-ad{text-align:center;margin-bottom:15px;}
 #main-nav{float:left;font-family:'ABeeZee', sans-serif;margin:0 10px;}
 #main-nav li{position:relative;float:left;line-height:94px;display:block;margin:0;}
