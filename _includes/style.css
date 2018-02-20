@@ -1,10 +1,10 @@
 .col-left {
-    width: 60%;
+    width: 70%;
     float: left;
 }
 
 .col-right {
-    width: 36%;
+    width: 26%;
     float: right;
 }
 
@@ -577,7 +577,6 @@ img {
   .card {
     margin-bottom: 2em;
     display: flex;
-    flex: 0 1 calc(33% - 0.5em);
     /* width: calc(33% - 1em); */
   }
 } /* mq 60em*/
