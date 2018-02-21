@@ -14,10 +14,16 @@
 <p>Popular Tags</p>
 <div class="widget-content cloud-label-widget-content">
 
-  {% for tag in page.tags %} 
 
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
 <span class="label-size">
-<a dir="ltr" href="/tags/{{ tag }}">{{ tag }}</a>
+
+ <a href="/tag/{{ tag | first | slugify }}/">
+            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+    </a>
+
+
 </span>
 {% endfor %}
 
@@ -44,11 +50,11 @@
 <div class="widget-content">
 <div class="top-navigation-right">
 <div class="top-social-wrapper">
-<div class="social-icon"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></div>
+<div class="social-icon"><a href="#" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a></div>
 <div class="social-icon"><a href="#" target="_blank"><i class="fa fa-google"></i></a></div>
-<div class="social-icon"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></div>
-<div class="social-icon"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></div>
-<div class="social-icon"><a href="#" target="_blank"><i class="fa fa-pinterest-square"></i></a></div>
+<div class="social-icon"><a href="#" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></div>
+<div class="social-icon"><a href="#" rel="nofollow" target="_blank"><i class="fa fa-youtube-play"></i></a></div>
+<div class="social-icon"><a href="#" rel="nofollow" target="_blank"><i class="fa fa-pinterest-square"></i></a></div>
 <div class="clear">					
 </div>
 </div></div>
@@ -62,7 +68,7 @@
 <div id="footerfix">
 <div class="copyleft">
 Copyright © {{ 'now' | date: "%Y" }}
-<a href="{{ site.url }}">{{ site.title }}</a> All Rights Reserved - <div id="mscontent" >Created with <i class="fa fa-heart"></i> by <a href="/contact_us"   rel="nofollow"  >me</a></div>
+<a href="{{ site.url }}">{{ site.title }}</a> All Rights Reserved
 </div>
 </div>
 </footer>
