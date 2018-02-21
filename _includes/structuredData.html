@@ -269,9 +269,9 @@
         "@id": "{{page.permalink}}#main_content"
       },
     "isBasedOnUrl":"https://schema.org/Article",
-    "datePublished":"{{ page.date }}",
-    "dateModified":"{{ page.date }}",
-    "name":"{{page.pagetitle}}",
+    "datePublished":"{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}",
+    "dateModified":"{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}",
+    "name":"{{page.title}}",
     "inLanguage":"{{site.lang}}",
     "isFamilyFriendly":"yes",
     "keywords":" {{site.title}} {% for tag in page.tags %} ,{{ tag }} {% endfor %}",
