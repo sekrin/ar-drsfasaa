@@ -3,55 +3,23 @@
 <div id="footer-widgetfix">
 <div class="footer-widget" id="footx1">
 <div class="footer section" id="footer1"><div class="widget HTML" data-version="1" id="HTML5">
-<h2 class="title">About</h2>
+<h2 class="title">{{ site.title }}</h2>
 <div class="widget-content">
-Vape vegan enamel pin, locavore affogato helvetica try-hard schlitz. Brunch fixie vegan skateboard distillery franzen kombucha. Kickstarter pug chia, mumblecore pickled pinterest hell of put a bird on it glossier sustainable subway tile vegan PBR&amp;B. VHS tattooed butcher hell of shabby chic, retro gochujang polaroid kale chips chillwave pug microdosing.
+{{ site.description }}
 </div>
 </div></div>
 </div>
 <div class="footer-widget" id="footx2">
 <div class="footer section" id="footer2"><div class="widget Label" data-version="1" id="Label3">
-<h2>Popular Tags</h2>
+<p>Popular Tags</p>
 <div class="widget-content cloud-label-widget-content">
-<span class="label-size label-size-3">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Advertisement">Advertisement</a>
+
+  {% for tag in site.tags %} 
+
+<span class="label-size">
+<a dir="ltr" href="/tags/{{ tag }}">{{ tag }}</a>
 </span>
-<span class="label-size label-size-2">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/AdWords">AdWords</a>
-</span>
-<span class="label-size label-size-5">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Content%20Marketing">Content Marketing</a>
-</span>
-<span class="label-size label-size-2">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Customer">Customer</a>
-</span>
-<span class="label-size label-size-4">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Facebook">Facebook</a>
-</span>
-<span class="label-size label-size-3">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Google">Google</a>
-</span>
-<span class="label-size label-size-1">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Google%20Map">Google Map</a>
-</span>
-<span class="label-size label-size-5">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Local%20Search">Local Search</a>
-</span>
-<span class="label-size label-size-3">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Mobile">Mobile</a>
-</span>
-<span class="label-size label-size-4">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/News">News</a>
-</span>
-<span class="label-size label-size-5">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Paid%20Search">Paid Search</a>
-</span>
-<span class="label-size label-size-5">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/SEO">SEO</a>
-</span>
-<span class="label-size label-size-1">
-<a dir="ltr" href="https://smoothgrid-templatemark.blogspot.sg/search/label/Snapchat">Snapchat</a>
-</span>
+{% endfor %}
 
 <div class="clear"></div>
 </div>
@@ -61,16 +29,15 @@ Vape vegan enamel pin, locavore affogato helvetica try-hard schlitz. Brunch fixi
 <div class="footer section" id="footer3">
 
 <div class="widget LinkList" data-version="1" id="LinkList2">
-<h2>Site Links</h2>
+<p>Site Links</p>
 <div class="widget-content">
 <ul>
-<li><a href="http://">Report a Problem</a></li>
-<li><a href="http://">Navigations</a></li>
-<li><a href="http://">Contact us</a></li>
-<li><a href="http://">Privacy</a></li>
-<li><a href="http://">Terms &amp; Condition</a></li>
-<li><a href="http://">About us</a></li>
-<li><a href="http://">Sitemap</a></li>
+<li><a href="/contact_us.html" rel="nofollow" >Report a Problem</a></li>
+<li><a href="/contact_us.html" rel="nofollow" >Contact us</a></li>
+<li><a href="/privacy-policy.html" rel="nofollow" >Privacy</a></li>
+<li><a href="/terms-of-service.html" rel="nofollow" >Terms &amp; Condition</a></li>
+<li><a href="/about" rel="nofollow" >About us</a></li>
+<li><a href="/sitemap">Sitemap</a></li>
 </ul>
 </div>
 </div><div class="widget HTML" data-version="1" id="HTML1">
@@ -80,7 +47,6 @@ Vape vegan enamel pin, locavore affogato helvetica try-hard schlitz. Brunch fixi
 <div class="social-icon"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></div>
 <div class="social-icon"><a href="#" target="_blank"><i class="fa fa-google"></i></a></div>
 <div class="social-icon"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></div>
-<div class="social-icon"><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></div>
 <div class="social-icon"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></div>
 <div class="social-icon"><a href="#" target="_blank"><i class="fa fa-pinterest-square"></i></a></div>
 <div class="clear">					
@@ -95,8 +61,8 @@ Vape vegan enamel pin, locavore affogato helvetica try-hard schlitz. Brunch fixi
 </div>
 <div id="footerfix">
 <div class="copyleft">
-Copyright © 2018
-<a href="https://smoothgrid-templatemark.blogspot.sg/">Smooth Grid</a> All Rights Reserved - <div id="mscontent" style="display: inline-block;">Created with <i style="color:#ff695d;" class="fa fa-heart"></i> by <a href="http://www.templatemark.com">TemplateMark</a></div>
+Copyright © {{ 'now' | date: "%Y" }}
+<a href="{{ site.url }}">{{ site.title }}</a> All Rights Reserved - <div id="mscontent" style="display: inline-block;">Created with <i style="color:#ff695d;" class="fa fa-heart"></i> by <a href="/contact_us"   rel="nofollow"  >me</a></div>
 </div>
 </div>
 </footer>
