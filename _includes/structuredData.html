@@ -1,285 +1,51 @@
-  {% if page.home %}
+{% assign wordcount = include.content | number_of_words %}
 
-<script type="application/ld+json">[
-    {  
-        "@context":"https://schema.org",
-        "@type":"WPHeader",
-        "@id":"{{site.url}}/#header_website",
-        "image": {
-        	"@type": "imageObject",
-            "@id": "header_website_picture",
-            "url": "{{site.site_image}}",
-            "height": "400",
-            "width": "400"
-        }
-    },
-    {  
-        "@context":"https://schema.org",
-        "@type":"WPSideBar",
-        "@id":"{{site.url}}/#sidebar_left"
-    },
-    {  
-        "@context":"https://schema.org",
-        "@type":"WPSideBar",
-        "@id":"{{site.url}}/#sidebar_right"
-    },
-    {  
-        "@context":"https://schema.org",
-        "@type":"WPFooter",
-        "@id":"{{site.url}}/#footer_website"
-    }
-]</script>
-<script type="application/ld+json">{
-    "@context":"http://www.schema.org",
-    "@type":"WebSite",
-    "hasPart":[  
-        {  
-            "@type":"WPHeader",
-            "@id":"{{site.url}}/#header_website"
-        },
-        {  
-            "@type":"WPSideBar",
-            "@id":"{{site.url}}/#sidebar_left"
-        },
-        {  
-            "@type":"WPSideBar",
-            "@id":"{{site.url}}/#sidebar_right"
-        },
-        {  
-            "@type":"WPFooter",
-            "@id":"{{site.url}}/#footer_website"
-        }
+<script type="application/ld+json">
+{  
+   "@context":"http://schema.org",
+   "@type":"BlogPosting",
+   "headline":"{{ include.headline }}",
+   "genre":"{{ include.category }}",
+   "keywords":"{{ include.keywords }}",
+   "wordCount":"{{ wordcount }}",
+   "url":"https://pauldambra.github.io{{ include.link }}",
+   "datePublished":"{{ include.date | | date: '%Y-%m-%d' }}",
+      "dateModified":"{{ include.date | | date: '%Y-%m-%d' }}",
+
+   "author":{  
+      "@type":"Person",
+      "name":"Paul D'Ambra",
+      "sameAs":[  
+        "https://twitter.com/pauldambra",
+        "https://github.com/pauldambra",
+        "https://plus.google.com/u/0/+PaulDAmbraPlus"
+      ]
+   },
+   "publisher":{  
+"@type": "Organization",
+    "name": "Paul D'Ambra",
+    "sameAs": [
+        "https://twitter.com/pauldambra",
+        "https://github.com/pauldambra",
+        "https://plus.google.com/u/0/+PaulDAmbraPlus"
     ],
-    "Publisher":{  
-        "@type":"Organization",
-        "@id": "{{site.url}}#organization"
-    },
-    "Author":{  
-        "@type":"person",
-        "@id": "{{site.url}}/about_us"
-    },
-    "editor":{  
-        "@type":"person",
-        "@id": "{{site.url}}/about_us"
-    },
-    "image":[
-	    {  
-	        "@type":"imageObject",
-	        "url":"{{site.site_image}}",
-	        "height":"400",
-	        "width":"400",
-	        "isFamilyFriendly":"yes"
-	    }
-	],
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.google.com/search?q={search_term}&as_sitesearch={{site.url}}",
-        "query-input": "required name=search_term"
-    },
-    "copyrightYear":"{{ 'now' | date: "%Y" }}",
-    "datePublished":"August 27, 2009",
-    "isBasedOnUrl":"https://schema.org",
-    "name":"{{site.title}}",
-    "inLanguage":"{{site.lang}}",
-    "isFamilyFriendly":"yes",
-	
-    "keywords":"{{site.title}} {% for keyword in site.keywords %} ,{{ tag }} {% endfor %}",
-    "url":"{{site.url}}/",
-    "description":"{{site.description}}"
-	}
-}</script>
-<script type="application/ld+json">{
-    "@context":"http://www.schema.org",  
-        "@type":"Organization",
-        "@id": "{{site.url}}#organization",
-        "name":"{{site.title}}",
-        "url":"{{site.url}}",
-        "email": "{{site.email}}",
-        "numberOfEmployees": "1",
-        "employee":{
-        	"@type": "Person",
-            "@id": "{{site.url}}/about_us"
-         },
-         "founder":{
-        	"@type": "Person",
-            "@id": "{{site.url}}/about_us"
-         },
-        "logo":{  
-            "@type":"ImageObject",
-            "url":"{{site.logo}}",
-            "width":"60",
-            "height":"60"
-        },
-        "image":{  
-            "@type":"ImageObject",
-            "url":"{{site.site_image}}",
-            "width":"400",
-            "height":"400"
-        },
-        "description":"{{site.description}}",
-        "sameAs": [
-        	"https://www.facebook.com/{{site.facebook_profile}}",
-        	"https://plus.google.com/+{{site.google_plus}}",
-            "https://twitter.com/{{site.google_plus}}",
-            "https://www.pinterest.com/{{site.pinterest}}/",
-            "https://{{site.tumblr}}.tumblr.com/"
-        ]
-}</script>
-
-
-
-
-
-
-
-  {% else %}
-
-<script type="application/ld+json">[
-    {  
-        "@context":"https://schema.org",
-        "@type":"WPHeader",
-        "@id":"{{page.permalink}}#header_website",
-        "image": {
-        	"@type": "imageObject",
-            "@id": "{{page.permalink}}#header_website_picture",
-            "url": "{{site.site_image}}",
-            "height": "400",
-            "width": "400"
-        }
-    },
-    {  
-        "@context":"https://schema.org",
-        "@type":"WPSideBar",
-        "@id":"{{page.permalink}}#sidebar_left"
-    },
-    {  
-        "@context":"https://schema.org",
-        "@type":"WPSideBar",
-        "@id":"{{page.permalink}}#sidebar_right"
-    },
-    {  
-        "@context":"https://schema.org",
-        "@type":"WPFooter",
-        "@id":"{{page.permalink}}#footer_website"
+    "logo": {
+      "@type": "ImageObject",
+      "contentUrl": "https://pauldambra.github.io/images/logo.png",
+        "url": "https://pauldambra.github.io"
     }
-]</script>
-
-<script type="application/ld+json">{
-    "@context":"http://www.schema.org",
-    "@type":"WebPage",
-    "hasPart":[  
-        {  
-            "@type":"WPHeader",
-            "@id":"{{page.permalink}}#header_website"
-        },
-        {  
-            "@type":"WPSideBar",
-            "@id":"{{page.permalink}}#sidebar_left"
-        },
-        {  
-            "@type":"WPSideBar",
-            "@id":"{{page.permalink}}#sidebar_right"
-        },
-        {  
-            "@type":"WPFooter",
-            "@id":"{{page.permalink}}#footer_website"
-        }
-    ],
-    "Publisher":{  
-        "@type":"Organization",
-        "@id": "{{site.url}}#organization",
-        "name":"{{site.title}}",
-        "url":"{{site.url}}"
-    },
-    "Author":{  
-        "@type":"person",
-        "name":"{{site.author}}"
-		},
-    "image":[
-	    {  
-	        "@type":"imageObject",
-	        "url":"{{page.image}}",
-	        "height":"630",
-	        "width":"1200",
-	        "isFamilyFriendly":"yes"
-	    },
-	    {  
-	        "@type":"imageObject",
-	        "url":"{{page.image}}",
-	        "height":"220",
-	        "width":"440",
-	        "isFamilyFriendly":"yes"
-	    },
-	    {  
-	        "@type":"imageObject",
-	        "url":"{{page.image}}",
-	        "height":"150",
-	        "width":"150",
-	        "isFamilyFriendly":"yes"
-	    }
-	],
-    "breadcrumb":{  
-        "@type":"BreadcrumbList",
-        "itemListElement":[  
-
-
-
-{
-    "@type": "ListItem",
-    "position": 1,
-    "item": {
-      "@id": "{{site.url}}",
-      "name": "home",
-      "image": "{{site.url}}/assets/images/logo.jpg"
-    }
-  }
-        {% assign position = 1 %}
-  
-  
-  
-  
-  
-  
-  {% for tag in page.tags %}
-    {% assign position =  position | plus: 1 %}
-  
-  
-  
-  ,{
-    "@type": "ListItem",
-    "position": {{position}},
-    "item": {
-      "@id": "{{site.url}}books/tags/{{ tag }}",
-      "name": "{{ tag }}",
-      "image": "{{site.url}}/assets/images/logo.jpg"
-    }
-  }
-  
-  
-  {% endfor %}
-
-
-
-
-
-        ]
-    },
-    "mainEntity":{  
-        "@type":"TechArticle",
-        "@id": "{{page.permalink}}#main_content"
-      },
-    "isBasedOnUrl":"https://schema.org/Article",
-    "datePublished":"{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}",
-    "dateModified":"{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}",
-    "name":"{{page.title}}",
-    "inLanguage":"{{site.lang}}",
-    "isFamilyFriendly":"yes",
-    "keywords":" {{site.title}} {% for tag in page.tags %} ,{{ tag }} {% endfor %}",
-    "url":"{{page.permalink}}",
-    "description":"{{page.description}}"
-    }
-}</script>
-
-
-
-  {% endif %}
+   },
+   "image":{  
+      "@type":"ImageObject",
+      "contentUrl":"https://pauldambra.github.io/images/cardboard.jpg",
+      "url":"https://pauldambra.github.io",
+      "height":"450",
+      "width":"1000"
+   },
+   "mainEntityOfPage":{  
+      "@type":"WebPage",
+      "@id":"https://pauldambra.github.io{{ include.link }}"
+   },
+   "articleBody":{{ include.content | strip_html | jsonify | normalize_whitepace | strip_newlines | strip | replace: ' ', '  ' }}
+}
+</script>
