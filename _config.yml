@@ -1,13 +1,13 @@
 # Site settings
-title: Awesome Site Title
+title: apprendre android
 keyword:
 description: >
-  Awesome site description here
+tutoriels et astuces et cours et pdf pour apprendre la programmation android et savoir comment créer une application android mobile
 logo: "/assets/images/logo.jpg"
 site_image:
 image: # site_image
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://arabic-droid.github.io"
+url: "https://developpez-android.github.io"
 lang: en
 theme_color:
 
