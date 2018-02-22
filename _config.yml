@@ -1,8 +1,7 @@
 # Site settings
-title: apprendre android
+title: "apprendre android"
 keyword:
-description: >
-tutoriels et astuces et cours et pdf pour apprendre la programmation android et savoir comment créer une application android mobile
+description: "tutoriels et astuces et cours et pdf pour apprendre la programmation android et savoir comment créer une application android mobile"
 logo: "/assets/images/logo.jpg"
 site_image:
 image: # site_image
