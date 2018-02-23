@@ -6,7 +6,7 @@ logo: "/assets/images/logo.jpg"
 site_image:
 image: # site_image
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://developpez-android.github.io"
+url: "https://ar-droid.github.io"
 lang: en
 theme_color:
 
