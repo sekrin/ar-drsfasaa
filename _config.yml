@@ -1,46 +1,45 @@
-# Site settings
-title: "apprendre android"
-keyword:
-description: "tutoriels et astuces et cours et pdf pour apprendre la programmation android et savoir comment créer une application android mobile"
+---
+title: apprendre android
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+keyword: 
+description: tutoriels et astuces et cours et pdf pour apprendre la programmation
+  android et savoir comment créer une application android mobile
 logo: "/assets/images/logo.jpg"
-site_image:
-image: # site_image
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ar-droid.github.io"
+site_image: 
+image: 
+baseurl: ''
+url: https://ar-droid.github.io
 lang: en
-theme_color:
-
-paginate:	5 
+theme_color: 
+paginate: 5
 permalink: "/:title"
-
-
 author: Ismail ezzaki
 email: ismailezzaki96@gmail.com
-disqus_name:
+disqus_name: 
 facebook_admin: ismail.zaki.100
-facebook_id:
-twitter_username:
-facebook_profile:
-google_plus:
+facebook_id: 
+twitter_username: 
+facebook_profile: 
+google_plus: 
 github: 
-pinterest:
-tumblr:
+pinterest: 
+tumblr: 
+google_analytics: UA-93038764-5
+author_bio: 'Mea suas vituperatoribus et, virtute corpora quaestio cum ut. Ne solet
+  nostrum complectitur pri, vis ut inani populo.
 
-google_analytics: "UA-93038764-5"
-
-
-
-author_bio: >
-  Mea suas vituperatoribus et, virtute corpora quaestio cum ut.
-  Ne solet nostrum complectitur pri, vis ut inani populo.
+'
 author_image: "/assets/images/author.jpg"
-
-
-# Build settings
 markdown: kramdown
 highlighter: rouge
 kramdown:
   parse_block_html: true
-
 gems:
-  - jekyll-paginate
+- jekyll-paginate
