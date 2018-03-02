@@ -338,3 +338,32 @@ div.clear{clear:both;}
 #footer-widgetfix{width:100%;overflow:hidden;}
 #footer-widgetfix .footer-widget{width:100%;float:left;margin-left:10px;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! CSS Used from: https://blog.webjeda.com/css/main.css */
+*,*:before,*:after{box-sizing:border-box;}
+h2{font-family:-apple-system,".sfnstext-regular",san francisco,roboto,segoe ui,helvetica neue,lucida grande,Arial,sans-serif;font-weight:700;}
+a{color:#00953e;text-decoration:none;transition:.2s ease-in;}
+a:hover{color:rgba(0,0,0,.7);}
+.mainbox a{text-decoration:none;color:rgba(0,0,0,.7);}
+.card{width:300px;box-shadow:0 0 5px #ccc;border-radius:2px;margin:20px;text-align:center;transition:.2s ease-in;position:relative;}
+.card:hover{box-shadow:0 0 15px #aaa;}
+.card-footer{padding:5px;margin:0;border:0;}
+.card-footer h2{margin:0;font-size:15.5px;color:#828282;}
+.post-excerpt{font-size:15.5px;text-align:center!important;margin-bottom:.2em;margin-top:.2em;}
+.post-image-index{border-bottom:1px solid #e8e8e8;}
+hr{border:0;border-top:1px solid #e8e8e8;margin:5px 0;}
