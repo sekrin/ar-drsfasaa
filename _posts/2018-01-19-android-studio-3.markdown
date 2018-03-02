@@ -1,7 +1,7 @@
 ---
 title: مراجعة لميزات أندرويد ستوديو 3.0
 date: 2018-01-19 00:00:00 Z
-permalink: android-studio-3.0
+permalink: android-studio-3
 tags:
 - news
 description: و كالعادة اغلبنا يحمل التحديث دون معرفة مميزاته لذلك سنكسر هذه القاعدة
