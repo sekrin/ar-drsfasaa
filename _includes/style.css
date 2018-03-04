@@ -343,7 +343,7 @@ a:hover{color:rgba(0,0,0,.7);}
 .card-footer{padding:5px;margin:0;border:0;}
 .card-footer h2{margin:0;font-size:15.5px;color:#828282;}
 .post-excerpt{font-size:15.5px;text-align:center!important;margin-bottom:.2em;margin-top:.2em;}
-.post-image-index{border-bottom:1px solid #e8e8e8;}
+.post-image-index{border-bottom:1px solid #e8e8e8; width:100%;}
 hr{border:0;border-top:1px solid #e8e8e8;margin:5px 0;}
 
 
